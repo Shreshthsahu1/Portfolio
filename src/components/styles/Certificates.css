@@ -1,0 +1,134 @@
+.certificates-section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  margin-top: 50px;
+}
+
+.certificates-container {
+  margin: auto;
+}
+
+.certificates-container h2 {
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.certificates-container h2 span {
+  color: var(--accentColor);
+}
+
+.certificates-desc {
+  font-size: 20px;
+  color: #a0a0a0;
+  margin-bottom: 50px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.certificate-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(94, 234, 212, 0.3); /* using var(--accentColor) usually isn't parsed in rgba shorthand natively unless using modern CSS, so hardcoded accent fallback */
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.cert-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cert-icon-wrapper {
+  background: rgba(94, 234, 212, 0.1);
+  color: var(--accentColor);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-icon {
+  font-size: 24px;
+}
+
+.cert-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cert-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cert-issuer {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+.cert-date {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.cert-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--accentColor);
+  font-weight: 500;
+  transition: opacity 0.2s;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.cert-link:hover {
+  opacity: 0.8;
+  color: var(--accentColor);
+}
+
+@media screen and (max-width: 900px) {
+  .certificates-container h2 {
+    font-size: 40px;
+  }
+  .certificates-section {
+    padding: 50px 0;
+  }
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+}
